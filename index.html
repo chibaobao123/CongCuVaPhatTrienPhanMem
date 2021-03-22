@@ -25,10 +25,20 @@
 <body>
     <form>
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <button type="submit" >loginnnnnn</button>
+        <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+        <input type="button" onclick="login()"/>
       </form>
 </body>
+<script>
+    var password = document.getElementById("psw").value;
+    var user = document.getElementById("uname").value;
+    if (user="adimin" && password="admin"){
+        alert("success");
+        window.location("./login.html");
+    }else{
+        alert("wrong  username or password");
+    }
+</script>
 </html>
